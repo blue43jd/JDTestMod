@@ -1,0 +1,76 @@
+<!--
+Upgradeable per-trooper abilities (for which you need Battle Honors).
+These are defined the same as doctrine nodes, see doctrine_nodes.xml for implementation details.
+They are referenced in units.xml for each class.
+-->
+
+<DoctrineNodes>
+
+	<!-- 
+		offensive 
+	-->
+	<Node name="BH_Offence1" nameUI="unused" description="@trooper_upgrade_offence">
+		<EquipmentModifier>
+		
+			<!-- TODO: not sure if this is the right one, need Cerbu to confirm -->
+			<AddTo
+				suppressionScale="1.15"
+			/>
+		</EquipmentModifier>
+
+		<AttackTypeModifier minRange="0" maxRange="9999">
+			<AddTo
+				critChanceAdd="+10"
+			/>
+		</AttackTypeModifier>
+	</Node>
+
+	<Node name="BH_Offence2" description="@trooper_upgrade_offence">
+		<EquipmentModifier>
+			<AddTo
+				suppressionScale="1.15"
+			/>
+		</EquipmentModifier>
+
+		<AttackTypeModifier minRange="0" maxRange="9999">
+			<AddTo
+				critChanceAdd="+10"
+			/>
+		</AttackTypeModifier>
+	</Node>
+
+
+	<!-- 
+		defensive 
+	-->
+	<Node name="BH_Defence1" description="@trooper_upgrade_defence">
+		<EquipmentModifier>
+			<AddTo
+				suppressionRecoveryAdd="10"
+			/>
+		</EquipmentModifier>
+
+		<!-- these are in absolute time values, not percents -->
+		<AttackTypeModifier minRange="0" maxRange="9999">
+			<AddTo
+				minAimTime="-25"
+				maxAimTime="-25"
+			/>
+		</AttackTypeModifier>
+	</Node>
+
+	<Node name="BH_Defence2" description="@trooper_upgrade_defence">
+		<EquipmentModifier>
+			<AddTo
+				suppressionRecoveryAdd="10"
+			/>
+		</EquipmentModifier>
+
+		<AttackTypeModifier minRange="0" maxRange="9999">
+			<AddTo
+				minAimTime="-25"
+				maxAimTime="-25"
+			/>
+		</AttackTypeModifier>
+	</Node>
+</DoctrineNodes>
